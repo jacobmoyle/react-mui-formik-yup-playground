@@ -11,9 +11,12 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "clsx": "latest",
+    "formik": "2.1.4",
+    "lodash": "4.17.15",
     "react": "latest",
     "react-dom": "latest",
-    "react-scripts": "latest"
+    "react-scripts": "latest",
+    "yup": "0.29.1"
   },
   "browserslist": {
     "production": [
