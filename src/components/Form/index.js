@@ -17,16 +17,8 @@ import { sleep } from "./mockUtils";
 import { validationSchema, initialValues } from "./schema";
 
 function Form() {
-  const [showPassword, setShowPassword] = React.useState(false);
-  const handleClickShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
   /**
-   * We could destructure here for code cleanup,
-   * but I want to print all props for demo purposes.
+   * We could destructure here for code cleanup, but we're logging for demo purposes.
    */
   const formikProps = useFormik({
     initialValues,
@@ -42,7 +34,8 @@ function Form() {
   });
 
   console.log(
-    `Formik Props—Review Full Reference Doc.\nIt's a quick skim: https://jaredpalmer.com/formik/docs/api/formik#reference`,
+    `Formik Props—Review Full Reference Doc.
+    \nIt's a quick skim: https://jaredpalmer.com/formik/docs/api/formik#reference`,
     formikProps
   );
 
@@ -58,6 +51,7 @@ function Form() {
     values,
     dirty,
   } = formikProps;
+  const [showPassword, setShowPassword] = React.useState(false);
 
   return (
     <div>
@@ -161,8 +155,8 @@ function Form() {
               <InputAdornment position="end">
                 <IconButton
                   aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
+                  onClick={() => setShowPassword(!showPassword)}
+                  onMouseDown={(e) => e.preventDefault()}
                 >
                   {showPassword ? <Visibility /> : <VisibilityOff />}
                 </IconButton>

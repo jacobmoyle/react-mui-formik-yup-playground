@@ -57,7 +57,7 @@ export const validationSchema = Yup.object().shape({
     checked: Yup.bool(),
     input: Yup.string().when(["checked"], {
       is: true, // alternatively: (val) => val == true
-      then: Yup.string().required("Your selection make this required ;)"),
+      then: Yup.string().required("Required if checkbox is selected"),
       otherWise: Yup.string(),
     }),
   }),
