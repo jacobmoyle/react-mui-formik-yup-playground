@@ -1,25 +1,22 @@
-# Create React App example
+# Formik and Yup Spike (using MUI and React)
 
-## How to use
+## Setup
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
-
-```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/create-react-app
-cd create-react-app
-```
-
-Install it and run:
+- Download or clone the repo
+- Install dependencies:
 
 ```sh
 npm install
+```
+
+- Start dev server:
+
+```sh
 npm start
 ```
 
-or:
+## Review
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui-org/material-ui/tree/master/examples/create-react-app)
-
-## The idea behind the example
-
-This example demonstrates how you can use [Create React App](https://github.com/facebookincubator/create-react-app).
+- Review `src/components/Form` directory for additional notes and schema examples
+- Form will be running on [localhost:3000](http://localhost:3000/)
+  - **Note:** Open the developer console to review logged properties
