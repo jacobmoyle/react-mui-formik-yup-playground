@@ -15,6 +15,7 @@ import { useFormik } from "formik";
 import { formatPhone } from "./phoneUtils";
 import { sleep } from "./mockUtils";
 import { validationSchema, initialValues } from "./schema";
+import DisplayFormikState from "../DisplayFormikState";
 
 function Form() {
   /**
@@ -263,6 +264,7 @@ function Form() {
           Reset Form
         </Button>
       </form>
+      <DisplayFormikState {...formikProps} />
     </div>
   );
 }
